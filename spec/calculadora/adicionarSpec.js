@@ -17,9 +17,12 @@ describe('Suite de testes de adição',function(){
 
 	it('deve retornar 0 quando o valor 1 não for numerico',function(){
 		expect(Calculadora.adicionar(undefined,5) ).toEqual(0)
+		expect(Calculadora.adicionar(null,5) ).toEqual(0)
 	})
 
 	it('deve retornar 0 quando o valor 2 não for numerico',function(){
 		expect(Calculadora.adicionar(0,undefined) ).toEqual(0)
+		expect(Calculadora.adicionar(5,null) ).toEqual(0)
+
 	})
 })
